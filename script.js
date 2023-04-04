@@ -1,121 +1,67 @@
-// Set up variables to track calculator state
-let currentInput = '0';
-let operator = null;
-let previousInput = null;
+// Initialize variables
+let displayValue = '';
+let operator = '';
+let operand1 = '';
+let operand2 = '';
+let result = '';
 
-// Get the display element
-const display = document.getElementById('display');
-
-// Get all the buttons
-const buttons = document.querySelectorAll('button');
-
-// Add click event listener to each button
-buttons.forEach(button => {
-  button.addEventListener('click', handleButtonClick);
+// Add event listeners to number buttons
+const numberButtons = document.querySelectorAll('.number');
+numberButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    displayValue += button.value;
+    document.getElementById('display').value = displayValue;
+  });
 });
 
-// Handle button click event
-function handleButtonClick(event) {
-  const { target } = event;
-
-  // Check if the button is a number or operator
-  if (target.classList.contains('number')) {
-    handleNumberClick(target.value);
-  } else if (target.classList.contains('operator')) {
-    handleOperatorClick(target.value);
-  }
-}
-
-// Handle number button click event
-function handleNumberClick(value) {
-  // If the current input is '0', replace it with the new value
-  if (currentInput === '0') {
-    currentInput = value;
-  } else {
-    // Otherwise, append the new value to the current input
-    currentInput += value;
-  }
-
-  // Update the display
-  display.value = currentInput;
-}
-
-// Handle operator button click event
-function handleOperatorClick(value) {
-  switch (value) {
-    case 'C':
-      // Clear the current input and reset the calculator state
-      currentInput = '0';
-      operator = null;
-      previousInput = null;
-      break;
-    case 'CE':
-      // Clear the current input only
-      currentInput = '0';
-      break;
-    case '=':
-      // Evaluate the expression and update the display
-      evaluate();
-      break;
-    case 'sqrt':
-      // Calculate the square root of the current input and update the display
-      currentInput = Math.sqrt(parseFloat(currentInput)).toString();
-      display.value = currentInput;
-      break;
-    case '%':
-      // Calculate the percentage of the previous and current inputs and update the display
-      currentInput = ((parseFloat(previousInput) / 100) * parseFloat(currentInput)).toString();
-      display.value = currentInput;
-      break;
-    default:
-      // If an operator is already set, evaluate the expression
-      if (operator) {
-        evaluate();
+// Add event listeners to operator buttons
+const operatorButtons = document.querySelectorAll('.operator');
+operatorButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.value === 'C') {
+      // Clear all variables and reset display
+      displayValue = '';
+      operator = '';
+      operand1 = '';
+      operand2 = '';
+      result = '';
+      document.getElementById('display').value = '';
+    } else if (button.value === 'CE') {
+      // Clear only the display value
+      displayValue = '';
+      document.getElementById('display').value = '';
+    } else if (button.value === 'sqrt') {
+      // Calculate square root of display value and update display
+      result = Math.sqrt(parseFloat(displayValue));
+      document.getElementById('display').value = result;
+      displayValue = result.toString();
+    } else if (button.value === '=') {
+      // Calculate result of previous operation and update display
+      operand2 = parseFloat(displayValue);
+      switch (operator) {
+        case '+':
+          result = operand1 + operand2;
+          break;
+        case '-':
+          result = operand1 - operand2;
+          break;
+        case '*':
+          result = operand1 * operand2;
+          break;
+        case '/':
+          result = operand1 / operand2;
+          break;
       }
-
-      // Set the operator and save the current input as the previous input
-      operator = value;
-      previousInput = currentInput;
-      currentInput = '0';
-      break;
-  }
-}
-
-// Evaluate the expression and update the display
-function evaluate() {
-  const a = parseFloat(previousInput);
-  const b = parseFloat(currentInput);
-  let result;
-
-  switch (operator) {
-    case '+':
-      result = a + b;
-      break;
-    case '-':
-      result = a - b;
-      break;
-    case '*':
-      result = a * b;
-      break;
-    case '/':
-      result = a / b;
-      break;
-  }
-
-  // Update the display and reset the calculator state
-  currentInput = result.toString();
-  display.value = currentInput;
-  operator = null;
-  previousInput = null;
-}
-
-// Fetch data from JSON
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    // Do something with the data
-    console.log(data);
-  })
-  .catch(error => {
-    console.error(error);
+      document.getElementById('display').value = result;
+      displayValue = result.toString();
+      operand1 = '';
+      operand2 = '';
+      operator = '';
+    } else {
+      // Set operator and first operand
+      operator = button.value;
+      operand1 = parseFloat(displayValue);
+      displayValue = '';
+    }
   });
+});
