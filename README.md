@@ -28,6 +28,10 @@
 ## sqrt	Square Root	Square Root
 ## %	Percentage	Percentage
 
+## TECHNOLOGIES USED
+## HTML
+## CSS
+## JavaScript
 
 
 
