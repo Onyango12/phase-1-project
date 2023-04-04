@@ -7,12 +7,14 @@
 
       }
       #calculator {
-        background-color: red;
+        background-color: transparent;
         border: 5px solid blue;
-        border-radius: 8px;
+        border-radius: 10px;
         margin: 20px auto;
         padding: 30px;
         width: 300px;
+        margin-top: 200px;
+        
       }
       #display {
         background-color: slategray;
