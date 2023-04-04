@@ -13,6 +13,9 @@
 ## OPERATORS
 ## The following operators are supported by the calculator:
 
+## GETTING STARTED
+## To use the calculator, simply open the application and start entering numbers and operators using the provided buttons. The display will show the current input as well as the result of any operations.
+
 ## Symbol	Name	Operation
 ## +	Addition	Addition
 ## -	Subtraction	Subtraction
@@ -24,6 +27,8 @@
 ## .	Decimal	Decimal
 ## sqrt	Square Root	Square Root
 ## %	Percentage	Percentage
+
+
 
 
 
