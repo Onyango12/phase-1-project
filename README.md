@@ -36,6 +36,9 @@
 ## CONTRIBUTING
 ## Contributions to the calculator project are welcome! If you find a bug or have an idea for an improvement, please open an issue or submit a pull request.
 
+## License
+## This project is licensed under the MIT License - see the LICENSE.md file for details.
+
 
 
 
