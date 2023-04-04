@@ -10,6 +10,20 @@
 ## Decimal input support
 ## Responsive design
 
+## OPERATORS
+## The following operators are supported by the calculator:
+
+## Symbol	Name	Operation
+## +	Addition	Addition
+## -	Subtraction	Subtraction
+## *	Multiplication	Multiplication
+## /	Division	Division
+## C	Clear	Clear
+## CE	Clear Entry	Clear Entry
+## =	Equals	Equals
+## .	Decimal	Decimal
+## sqrt	Square Root	Square Root
+## %	Percentage	Percentage
 
 
 
