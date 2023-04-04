@@ -1,0 +1,54 @@
+{
+  "operators": [
+    {
+      "symbol": "+",
+      "name": "addition",
+      "operation": "+"
+    },
+    {
+      "symbol": "-",
+      "name": "subtraction",
+      "operation": "-"
+    },
+    {
+      "symbol": "*",
+      "name": "multiplication",
+      "operation": "*"
+    },
+    {
+      "symbol": "/",
+      "name": "division",
+      "operation": "/"
+    },
+    {
+      "symbol": "C",
+      "name": "clear",
+      "operation": "clear"
+    },
+    {
+      "symbol": "CE",
+      "name": "clear entry",
+      "operation": "clearEntry"
+    },
+    {
+      "symbol": "=",
+      "name": "equals",
+      "operation": "equals"
+    },
+    {
+      "symbol": ".",
+      "name": "decimal",
+      "operation": "decimal"
+    },
+    {
+      "symbol": "sqrt",
+      "name": "square root",
+      "operation": "sqrt"
+    },
+    {
+      "symbol": "%",
+      "name": "percentage",
+      "operation": "%"
+    }
+  ]
+}
