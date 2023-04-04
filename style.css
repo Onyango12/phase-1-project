@@ -40,10 +40,7 @@
         padding: 0 10px;
         transition: background-color 0.1s ease-in-out;
         width: 40px;
-      }
-      .operator:hover,
-      .number:hover {
-        background-color: #e0e0e0;
+      
       }
       .operator:active,
       .number:active {
