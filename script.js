@@ -4,6 +4,7 @@ let operator = '';
 let operand1 = '';
 let operand2 = '';
 let result = '';
+let lastOperation = '';
 
 // Add event listeners to number buttons
 const numberButtons = document.querySelectorAll('.number');
@@ -25,6 +26,7 @@ operatorButtons.forEach(button => {
       operand1 = '';
       operand2 = '';
       result = '';
+      lastOperation = '';
       document.getElementById('display').value = '';
     } else if (button.value === 'CE') {
       // Clear only the display value
@@ -35,6 +37,7 @@ operatorButtons.forEach(button => {
       result = Math.sqrt(parseFloat(displayValue));
       document.getElementById('display').value = result;
       displayValue = result.toString();
+      lastOperation = `sqrt(${displayValue})`;
     } else if (button.value === '=') {
       // Calculate result of previous operation and update display
       operand2 = parseFloat(displayValue);
@@ -54,6 +57,7 @@ operatorButtons.forEach(button => {
       }
       document.getElementById('display').value = result;
       displayValue = result.toString();
+      lastOperation = `${operand1} ${operator} ${operand2} = ${result}`;
       operand1 = '';
       operand2 = '';
       operator = '';
@@ -62,6 +66,7 @@ operatorButtons.forEach(button => {
       operator = button.value;
       operand1 = parseFloat(displayValue);
       displayValue = '';
+      lastOperation = `${operand1} ${operator}`;
     }
   });
 });
