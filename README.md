@@ -1,47 +1,24 @@
-# CALCULATOR
-# This is a simple calculator application built using HTML, CSS, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division, as well as other functions such as square root and percentage calculation.
+JavaScript Calculator
+This is a simple calculator app built with JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division, as well as more advanced functions like square root and percentage calculations.
 
-## FEATURES
-## Addition, subtraction, multiplication, and division operations
-## Clear button to reset the calculator
-## Clear entry button to clear the most recent input
-## Square root calculation
-## Percentage calculation
-## Decimal input support
-## Responsive design
+How to Use
+To use the calculator, simply open the index.html file in a web browser. The calculator will be displayed on the screen, with buttons for numbers and operators. Click on the buttons to enter values and perform calculations. The result will be displayed in the calculator's display area.
 
-## OPERATORS
-## The following operators are supported by the calculator:
+Live Demo
+To see the calculator in action, visit the live site on GitHub Pages: Link to Live Site
 
-## GETTING STARTED
-## To use the calculator, simply open the application and start entering numbers and operators using the provided buttons. The display will show the current input as well as the result of any operations.
+Set Up Instructions
+To set up the project on your local machine, follow these steps:
 
-## Symbol	Name	Operation
-## +	Addition	Addition
-## -	Subtraction	Subtraction
-## *	Multiplication	Multiplication
-## /	Division	Division
-## C	Clear	Clear
-## CE	Clear Entry	Clear Entry
-## =	Equals	Equals
-## .	Decimal	Decimal
-## sqrt	Square Root	Square Root
-## %	Percentage	Percentage
+Clone the repository to your local machine: git clone https://github.com/Onyango12/phase-1-project
+Navigate to the project directory: cd javascript-calculator
+Open the index.html file in a web browser.
 
-## TECHNOLOGIES USED
-## HTML
-## CSS
-## JavaScript
+Author
+This calculator was created by Charles Onyango.
 
-## CONTRIBUTING
-## Contributions to the calculator project are welcome! If you find a bug or have an idea for an improvement, please open an issue or submit a pull request.
+License
+This project is licensed under the MIT License.
 
-## LICENCES
-## This project is licensed under the MIT License - see the LICENSE.md file for details.
-
-
-
-
-
-
-
+Copyright
+(c) Charles Onyango, 2023.
